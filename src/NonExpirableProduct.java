@@ -35,7 +35,7 @@ public class NonExpirableProduct extends Product implements Shippable {
     @Override
     public double getWeight() {
         if (!requiresShipping) {
-            throw new IllegalStateException(getName() + " doesnt require shipping, weight access is invalid.");
+            throw new IllegalStateException(getName() + " doesnt require shipping");
         }
         return weight;
     }

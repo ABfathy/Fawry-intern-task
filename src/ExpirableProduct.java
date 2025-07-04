@@ -5,6 +5,12 @@ public class ExpirableProduct extends Product implements Shippable{
     public ExpirableProduct(String name, double price, int quantity, LocalDate expiryDate, double weight){
 
         super(name,price,quantity);
+        if (expiryDate == null || expiryDate.isBefore(LocalDate.now())){
+            throw new IllegalArgumentException("expiry date must be in the future");
+        }
+        if (weight <= 0) {
+            throw new IllegalArgumentException("weight must be positive");
+        }
         this.expiryDate = expiryDate;
         this.weight = weight;
 
