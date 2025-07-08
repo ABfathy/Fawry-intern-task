@@ -1,0 +1,1 @@
+This is a simple console-based e-commerce system designed as a task for an internship challenge using Java and  object-oriented principles.
